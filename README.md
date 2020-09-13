@@ -1,4 +1,4 @@
-# C-HackerRank
+# C++ -HackerRank
 
 ### Box It!
 ```
