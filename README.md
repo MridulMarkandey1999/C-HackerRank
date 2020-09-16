@@ -64,3 +64,45 @@ class Box{
 };
 
 ```
+### Lower Bound-STL
+
+```
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int N,Q,q1,index,num;
+    cin>>N;
+    vector<int> V;
+    V.push_back(INT16_MIN);
+    for(int x=0;x<N;x++)
+    {
+        cin>>num;
+        V.push_back(num);
+    }
+    cin>>Q;
+    for(int i=0;i<Q;i++)
+    {
+        cin>>q1;
+        auto it=lower_bound(V.begin(),V.end(),q1);
+        index=distance(V.begin(),it);
+        if(*it == q1)
+        {
+            cout<<"Yes "<<index<<endl;
+        }
+        else{
+            cout<<"No "<<index<<endl;
+        }
+    }
+    return 0;
+}
+
+```
+
+
